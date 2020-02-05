@@ -1,0 +1,69 @@
+.homeContainer {
+    margin-bottom:50vw;
+    text-align:center;
+}
+
+.card {
+    width:15%;
+    max-width: 120px;
+    margin:20px;
+    animation: deal 0.5s;
+}
+
+.dealerContainer {
+    position: absolute;
+    width:100%;
+    top:0px;
+
+}
+
+.handContainer {
+    position: absolute;
+    width:100%;
+    bottom:0px;
+
+}
+
+.handContainer button{
+    border:none;
+    margin:auto;
+    margin-top:20px;;
+    display:block;
+    height:30px;
+    width:120px;
+    color:white;
+    font-size:14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s;
+    border-radius: 10px;
+    outline:none;
+}
+
+.handContainer button:hover {
+    background:green;
+}
+
+.total {
+    color:white;
+    font-weight: bold;
+    font-size:22px;
+}
+
+.hide {
+    display:none;
+}
+
+.disabled {
+    background:orange;
+}
+@-webkit-keyframes deal {
+    from { opacity:0.5;    transform: translatey(-400px);}
+    to {opacity: 1;    transform: translatey(0px);}
+  }
+  
+
+@keyframes deal {
+    from { opacity:0.5;    transform: translatey(-400px);}
+    to {opacity: 1;    transform: translatey(0px);}
+}
