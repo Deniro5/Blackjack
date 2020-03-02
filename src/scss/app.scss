@@ -8,5 +8,7 @@
 body {
   margin: 0;
   font-family: "Palatino", "Lucida Grande", sans-serif;
-  background:green;
+  background-image: url('../background.jpg');
+  background-repeat: no-repeat;
+  background-size: 200vh;
 }

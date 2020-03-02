@@ -4,7 +4,7 @@
 }
 
 .card {
-    width:15%;
+    width:20%;
     max-width: 120px;
     margin:20px;
     animation: deal 0.5s;
@@ -25,24 +25,25 @@
 }
 
 .handContainer button{
-    border:none;
+    border:black 1px solid;
+    background:white;
     margin:auto;
     margin-top:20px;;
     display:block;
     height:30px;
     width:120px;
-    color:white;
+    color:black;
     font-size:14px;
     font-weight: bold;
     cursor: pointer;
     transition: 0.5s;
-    border-radius: 10px;
+    border-radius: 2px;
     outline:none;
+    &:hover {
+        background:rgb(218, 218, 218)
+    }
 }
 
-.handContainer button:hover {
-    background:green;
-}
 
 .total {
     color:white;

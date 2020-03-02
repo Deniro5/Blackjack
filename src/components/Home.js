@@ -25,17 +25,17 @@ class Home extends Component {
     }
     //deal cards to players
     var newcardindex = (Math.floor((Math.random() * deck.length) + 1))-1;
-    var newcard1 = cards[deck[40]]
-  //  deck.splice(newcardindex,1);
+    var newcard1 = cards[deck[newcardindex]]
+    deck.splice(newcardindex,1);
     var newcardindex2 = (Math.floor((Math.random() * deck.length) + 1))-1;
-    var newcard2 = cards[deck[41]]
-  //  deck.splice(newcardindex2,1);
+    var newcard2 = cards[deck[newcardindex2]]
+    deck.splice(newcardindex2,1);
     var newcardindex3 = (Math.floor((Math.random() * deck.length) + 1))-1;
-    var newcard3 = cards[deck[50]]
-  //  deck.splice(newcardindex3,1);
+    var newcard3 = cards[deck[newcardindex3]]
+    deck.splice(newcardindex3,1);
     var newcardindex4 = (Math.floor((Math.random() * deck.length) + 1))-1;
-    var newcard4 = cards[deck[5]]
-  //  deck.splice(newcardindex4,1);
+    var newcard4 = cards[deck[newcardindex4]]
+    deck.splice(newcardindex4,1);
     this.setState({
       deck: deck,
       hand: [newcard1, newcard2],
@@ -184,15 +184,15 @@ class Home extends Component {
     if (this.state.status.length < 1) {
       controls.push(
         <Fragment>
-          <button disabled = {this.state.stay} style = {{background: (this.state.stay ?  'grey' : 'maroon')}}  onClick = {this.hit}> Hit </button>
-          <button disabled = {this.state.stay} style = {{background: (this.state.stay ?  'grey' : 'maroon')}} onClick = {this.stay}> Stay </button>
+          <button disabled = {this.state.stay} onClick = {this.hit}> Hit </button>
+          <button disabled = {this.state.stay} onClick = {this.stay}> Stay </button>
         </Fragment>
       )
     }
     else {
       controls.push(
         <Fragment>
-          <button style = {{background:'maroon'}}  onClick = {this.resetDeck}> Reset Game </button>
+          <button  onClick = {this.resetDeck}> Reset Game </button>
         </Fragment>
       )
     }
