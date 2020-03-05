@@ -54,13 +54,16 @@ class Home extends Component {
     //Get the sum of the hand
     while (count < hand.length) {
       value += hand[count][1];
-      if (hand[count][0].charAt(7) === 'A') {
+      if (hand[count][0].charAt(5) === 'A') {
         aces++;
+        
       }
       count++;
     }
+
     //If we are over, see if we can get under by treating the aces as one until we are under 21
     while (value > 21 && aces > 0) {
+
       value-=10;
       aces--;
     } 
