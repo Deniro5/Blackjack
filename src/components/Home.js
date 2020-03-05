@@ -173,7 +173,7 @@ class Home extends Component {
     var dealerHand = [];
     while (count < this.state.dealerHand.length) {
       if (count === 0 && this.state.status.length < 1) {
-        dealerHand.push(<img alt = "" className = "card" src = "../img/red_back.png"/>)
+        dealerHand.push(<img alt = "" className = "card" src = "imgs/red_back.png"/>)
       }
       else {
         dealerHand.push(<img alt = "" className = "card" src = {this.state.dealerHand[count][0]}/>)
