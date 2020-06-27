@@ -59,7 +59,6 @@ class Home extends Component {
       }
       count++;
     }
-
     //If we are over, see if we can get under by treating the aces as one until we are under 21
     while (value > 21 && aces > 0) {
       value -= 10;
@@ -158,7 +157,7 @@ class Home extends Component {
       alert("You lost. The dealer had a higher hand");
       status = "L";
     } else if (dealerValue < value) {
-      if (dealerValue <= 15) {
+      if (dealerValue <= 15 && this.state.stay) {
         this.dealerHit(false);
       } else if (this.state.stay) {
         //if the dealer doesnt draw and we are staying and we reveal then we won
